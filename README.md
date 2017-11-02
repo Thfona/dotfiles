@@ -38,3 +38,5 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Doge
 + Cmatrix
 + Htop
++ DejaVu
++ Font Awesome
