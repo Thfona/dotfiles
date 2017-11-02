@@ -254,7 +254,7 @@ label-separator-foreground = ${colors.foreground-alt}
 menu-0-0 =  Restart
 menu-0-0-exec = reboot
 menu-0-1 =  Shut Down
-menu-0-1-exec = shutdown
+menu-0-1-exec = poweroff
 #
 
 
