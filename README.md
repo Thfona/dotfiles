@@ -18,7 +18,7 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Firefox
 + Ranger
 + Vim
-+ Atom
++ Visual Studio Code
 + Nautilus
 + Skype
 + Discord
