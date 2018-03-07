@@ -1,5 +1,10 @@
 # Thfona's i3 config file
 
+
+###########
+# General #
+###########
+
 # mod key
 set $mod Mod4
 
@@ -129,8 +134,10 @@ assign [instance="libreoffice"] $ws9
 assign [class="Evince"] $ws9 ############################check
 assign [class="Transmission-gtk"] $ws10
 
-##############
 
+####################
+# Floating Windows #
+####################
 
 # floating enabled windows
 floating_maximum_size 800 x 600
@@ -143,6 +150,11 @@ for_window [class="Galculator"] floating enable
 
 # floating disabled windows
 # for_window [class=""] floating disable
+
+
+###########
+# Utility #
+###########
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -223,10 +235,11 @@ bindsym $mod+o exec --no-startup-id libreoffice
 # launch transmission
 bindsym $mod+t exec --no-startup-id transmission-gtk
 
-#########################
 
+########################
+# Startup Applications #
+########################
 
-# startup applications
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xrdb ~/.Xresources
