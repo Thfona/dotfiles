@@ -121,7 +121,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Firefox"] $ws1
 assign [class="vscode"] $ws3 ############################check
 assign [class="Nautilus"] $ws4
-assign [class="Skype"] $ws6
 assign [class="discord"] $ws6
 assign [class="Gimp"] $ws7
 assign [class="feh"] $ws7
@@ -143,7 +142,7 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="Galculator"] floating enable
 
 # floating disabled windows
-for_window [class="Skype"] floating disable
+# for_window [class=""] floating disable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
