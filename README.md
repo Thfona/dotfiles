@@ -26,6 +26,7 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Feh
 + Mirage
 + Libre Office
++ Evince
 + Transmission
 + Network Manager / Network Manager Applet
 + Pulseaudio / Pavucontrol
