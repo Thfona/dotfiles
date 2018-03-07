@@ -232,5 +232,5 @@ exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id wal -i ~/Pictures/Doge\ Wallpaper.jpg
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/polylaunch.sh
 exec --no-startup-id firefox
