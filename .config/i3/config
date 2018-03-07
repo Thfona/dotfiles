@@ -198,7 +198,7 @@ bindsym $mod+Shift+z exec --no-startup-id ~/.config/i3/lock.sh
 bindsym $mod+Print exec --no-startup-id scrot 'Screenshot.png'
 
 # print focused screen
-bindsym $mod+Shift+Print exec --no-startup-id scrot 'Screenshot.png'
+bindsym $mod+Shift+Print exec --no-startup-id scrot -u 'Screenshot.png'
 
 # gaps
 gaps inner 15
