@@ -1,6 +1,5 @@
 ; Thfona's Polybar config
 
-
 [colors]
 ;background = ${xrdb:color0}
 background = #260f0d
