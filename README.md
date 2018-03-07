@@ -34,7 +34,6 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Cava
 + Scrot
 + Neofetch
-+ Doge
 + Cmatrix
 + Htop
 + DejaVu Font
