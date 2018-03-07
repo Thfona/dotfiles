@@ -1,5 +1,6 @@
 ; Thfona's Polybar config
 
+
 [colors]
 ;background = ${xrdb:color0}
 background = #260f0d
@@ -14,6 +15,7 @@ secondary = #e60053
 alert = #bd2c40
 
 underline =
+
 
 [bar/example]
 monitor = LVDS1
@@ -57,7 +59,6 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 
-#
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -109,10 +110,8 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 ws-icon-default = 
-#
 
 
-#
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -122,10 +121,8 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-#
 
 
-#
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -133,10 +130,8 @@ format-prefix = "CPU: "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.underline}
 label = %percentage%%
-#
 
 
-#
 [module/memory]
 type = internal/memory
 interval = 2
@@ -144,10 +139,8 @@ format-prefix = "RAM: "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.underline}
 label = %percentage_used%%
-#
 
 
-#
 [module/date]
 type = internal/date
 interval = 1
@@ -162,10 +155,8 @@ format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.underline}
 
 label = %date%
-#
 
 
-#
 [module/volume]
 type = internal/volume
 
@@ -182,10 +173,8 @@ format-muted = <label-muted>
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-#
 
 
-#
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -212,10 +201,8 @@ animation-charging-1 = ""
 animation-charging-2 = ""
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 800
-#
 
 
-#
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
@@ -234,10 +221,8 @@ ramp-0 =
 ramp-1 =
 ramp-2 =
 ramp-foreground = ${colors.foreground-alt}
-#
 
 
-#
 [module/powermenu]
 type = custom/menu
 
@@ -254,7 +239,6 @@ menu-0-0 =  Restart
 menu-0-0-exec = reboot
 menu-0-1 =  Shut Down
 menu-0-1-exec = poweroff
-#
 
 
 [settings]
@@ -263,6 +247,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
+
 
 [global/wm]
 margin-top = 5
