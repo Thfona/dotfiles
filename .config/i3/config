@@ -211,9 +211,6 @@ bindsym $mod+c exec --no-startup-id galculator
 # launch neofetch
 bindsym $mod+Shift+n exec --no-startup-id urxvt -e ~/.config/neofetch/neolaunch.sh
 
-# launch doge
-bindsym $mod+Shift+d exec --no-startup-id urxvt -e ~/.config/doge.sh
-
 # launch pavucontrol
 bindsym $mod+p exec --no-startup-id pavucontrol
 
