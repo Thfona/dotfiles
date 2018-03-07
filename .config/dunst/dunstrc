@@ -185,8 +185,8 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     # background = ${xrdb:color0}
-    # foreground = ${xrdb:color7}
     background = "#260f0d"
+    # foreground = ${xrdb:color7}
     foreground = "#DACEAD"
     timeout = 10
 
