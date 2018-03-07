@@ -1,13 +1,20 @@
 ! Thfona Xresources
 
-! urxvt------------------------------------------------------------------------
+
+!--------
+! urxvt |
+!--------
+
 URxvt.font: xft:monospace:size=10
 URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.shading: 30
 
 
-! rofi ------------------------------------------------------------------------
+!-------
+! rofi |
+!-------
+
 rofi.modi: run
 rofi.font: DejaVu Sans 18
 rofi.lines: 5
