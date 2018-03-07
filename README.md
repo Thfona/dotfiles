@@ -11,16 +11,14 @@ It's a pretty simple rice but I'm satisfied with the result.
 + i3-gaps
 + i3-lock
 + Polybar
-+ Compton
-+ Pywal
 + Urxvt
++ Compton
 + Rofi
++ Pywal
 + Firefox
-+ Ranger
 + Vim
 + Visual Studio Code
 + Nautilus
-+ Skype
 + Discord
 + Gimp
 + Feh
