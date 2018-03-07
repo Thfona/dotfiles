@@ -120,7 +120,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # workspace assignments
 assign [class="Firefox"] $ws1
-assign [class="Atom"] $ws3
+assign [class="vscode"] $ws3 #check
 assign [class="Nautilus"] $ws4
 assign [class="Skype"] $ws6
 assign [class="discord"] $ws6
@@ -128,6 +128,7 @@ assign [class="Gimp"] $ws7
 assign [class="feh"] $ws7
 assign [class="Mirage"] $ws7
 assign [instance="libreoffice"] $ws9
+assign [class="Evince"] $ws9 #check
 assign [class="Transmission-gtk"] $ws10
 
 ##############
