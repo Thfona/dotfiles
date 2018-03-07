@@ -232,6 +232,9 @@ bindsym $mod+g exec --no-startup-id gimp
 # launch libreoffice
 bindsym $mod+o exec --no-startup-id libreoffice
 
+# launch evince
+bindsym $mod+Shift+p exec --no-startup-id evince
+
 # launch transmission
 bindsym $mod+t exec --no-startup-id transmission-gtk
 
