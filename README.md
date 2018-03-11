@@ -37,4 +37,4 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Cmatrix
 + Htop
 + DejaVu Font
-+ Font Awesome
++ Font Awesome 4.7
