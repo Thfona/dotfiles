@@ -36,5 +36,6 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Neofetch
 + Cmatrix
 + Htop
++ Cups / Cups-PDF
 + DejaVu Font
 + Font Awesome 4.7
