@@ -249,5 +249,5 @@
 # vim: ft=cfg
 
 [pa-applet]
-		appname = *pa-applet*
-		format = "%p"
+    appname = *pa-applet*
+    format = "%p"
