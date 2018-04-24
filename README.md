@@ -10,19 +10,19 @@ It's a pretty simple rice but I'm satisfied with the result.
 
 + i3-gaps
 + i3-lock
-+ Polybar
++ Polybar(AUR)
 + Urxvt
 + Compton
 + Rofi
-+ Pywal
++ Pywal(AUR)
 + Firefox
 + Vim
-+ Visual Studio Code
++ Visual Studio Code(AUR)
 + Nautilus
-+ Discord
++ Discord(AUR)
 + Gimp
 + Feh
-+ Mirage
++ Mirage(AUR)
 + Libre Office
 + Evince
 + Transmission
@@ -30,12 +30,13 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Pulseaudio / Pavucontrol
 + LxAppearance
 + Galculator
++ Spotify(AUR)
 + Cmus
-+ Cava
++ Cava(AUR)
 + Scrot
 + Neofetch
 + Cmatrix
 + Htop
 + Cups / Cups-PDF
 + DejaVu Font
-+ Font Awesome 4.7
++ Font Awesome 4.7(AUR)
