@@ -15,6 +15,7 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Compton
 + Rofi
 + Pywal(AUR)
++ Aurman
 + Firefox
 + Vim
 + Visual Studio Code(AUR)
