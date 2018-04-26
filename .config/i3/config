@@ -181,14 +181,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # workspace assignments
 assign [class="Firefox"] $ws1
-assign [class="vscode"] $ws3 ############################check
+assign [class="Code"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="discord"] $ws6
 assign [class="Gimp"] $ws7
 assign [class="feh"] $ws7
 assign [class="Mirage"] $ws7
 assign [instance="libreoffice"] $ws9
-assign [class="Evince"] $ws9 ############################check
+assign [class="Evince"] $ws9
 assign [class="Transmission-gtk"] $ws10
 
 
@@ -200,12 +200,12 @@ assign [class="Transmission-gtk"] $ws10
 floating_maximum_size 800 x 600
 
 # floating enabled windows
-for_window [class="Firefox" instance="Places"] floating enable
-for_window [class="Firefox" instance="Toplevel"] floating enable
-for_window [class="Nm-connection-editor"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [class="Galculator"] floating enable
+for_window [class="Firefox" instance="Places"] floating enable border pixel 3
+for_window [class="Firefox" instance="Toplevel"] floating enable border pixel 3
+for_window [class="Nm-connection-editor"] floating enable border pixel 3
+for_window [class="Pavucontrol"] floating enable border pixel 3
+for_window [class="Lxappearance"] floating enable border pixel 3
+for_window [class="Galculator"] floating enable border pixel 3
 
 # floating disabled windows
 # for_window [class=""] floating disable
@@ -250,6 +250,6 @@ bindsym $mod+t exec --no-startup-id transmission-gtk
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id wal -i ~/Pictures/Doge\ Wallpaper.jpg
+exec_always --no-startup-id wal -c -i ~/Pictures/Wallpaper.jpg
 exec_always --no-startup-id ~/.config/polybar/polylaunch.sh
 exec --no-startup-id firefox

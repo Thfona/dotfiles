@@ -1,10 +1,8 @@
 [colors]
-;background = ${xrdb:color0}
-background = #260f0d
+background = ${xrdb:color0}
 background-alt = #444
 
-;foreground = ${xrdb:color7}
-foreground = #DACEAD
+foreground = ${xrdb:color7}
 foreground-alt = #555
 
 primary = #ffb52a
@@ -41,7 +39,7 @@ font-1 = Font Awesome:pixelsize=10;1
 
 modules-left = i3
 modules-center =
-modules-right = volume battery date powermenu
+modules-right = battery date powermenu
 
 tray-position = center
 tray-padding = 0
@@ -71,10 +69,8 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index% %icon%
-;label-focused-foreground = ${xrdb:color0}
-label-focused-foreground = #260f0d
-;label-focused-background = ${xrdb:color3}
-label-focused-background = #E6992A
+label-focused-foreground = ${xrdb:color0}
+label-focused-background = ${xrdb:color2}
 label-focused-underline = ${colors.underline}
 label-focused-padding = 2
 
@@ -90,8 +86,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index% %icon%
-;label-urgent-foreground = ${xrdb:color0}
-label-urgent-foreground = #260f0d
+label-urgent-foreground = ${xrdb:color0}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -249,5 +244,3 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini
