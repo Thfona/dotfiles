@@ -17,7 +17,6 @@ It's a pretty simple rice but I'm satisfied with the result.
 + Pywal(AUR)
 + Aurman
 + Firefox
-+ Vim
 + Visual Studio Code(AUR)
 + Nautilus
 + Discord(AUR)
