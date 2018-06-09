@@ -1,12 +1,12 @@
-# Thfona's Arch Linux Rice
+# Thfona's Arch Linux dotfiles
 
 ![Screenshot](Screenshot.png)
 
-These are the dotfiles for my Arch Linux rice.
-It's a pretty simple rice but I'm satisfied with the result.
+These are the dotfiles for my old Arch Linux configuration.
+For my current Manjaro configuration check my dotfiles repository.
 
 
-## Stuff that I use:
+## Stuff that I used:
 
 + i3-gaps
 + i3-lock
