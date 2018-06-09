@@ -3,7 +3,6 @@
 ![Screenshot](Screenshot.png)
 
 These are the dotfiles for my old Arch Linux configuration.
-For my current Manjaro configuration check my dotfiles repository.
 
 
 ## Stuff that I used:
