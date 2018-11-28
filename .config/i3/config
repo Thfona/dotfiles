@@ -129,10 +129,10 @@ bindsym $mod+r mode "resize"
 bindsym $mod+z exec --no-startup-id ~/.config/i3/lock.sh
 
 # print screen
-bindsym $mod+Print exec --no-startup-id scrot 'Screenshot.png'
+bindsym $mod+Print exec --no-startup-id scrot 'Screenshot - $(date '+%Y-%m-%d %H:%M:%S').png'
 
 # print focused screen
-bindsym $mod+Shift+Print exec --no-startup-id scrot -u 'Screenshot.png'
+bindsym $mod+Shift+Print exec --no-startup-id scrot -u 'Screenshot - $(date '+%Y-%m-%d %H:%M:%S').png'
 
 # gaps
 gaps inner 15
