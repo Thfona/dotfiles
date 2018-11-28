@@ -38,6 +38,7 @@ These are the dotfiles for my Arch Linux configuration.
 + Neofetch
 + Cmatrix
 + Htop
-+ Cups / Cups-PDF
++ Cups
++ Cups-PDF
 + DejaVu Font (ttf-dejavu)
 + Font Awesome 4.7 (ttf-font-awesome-4) [AUR]
