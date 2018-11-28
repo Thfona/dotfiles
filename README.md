@@ -2,40 +2,42 @@
 
 ![Screenshot](Screenshot.png)
 
-These are the dotfiles for my old Arch Linux configuration.
+These are the dotfiles for my Arch Linux configuration.
 
 
-## Stuff that I used:
+## Stuff that I use:
 
 + i3-gaps
-+ i3-lock
-+ Polybar(AUR)
-+ Urxvt
++ i3lock
++ Polybar [AUR]
++ Urxvt (rxvt-unicode)
 + Compton
 + Rofi
-+ Pywal(AUR)
-+ Aurman
++ Pywal (python-pywal)
++ Aurman [AUR]
 + Firefox
-+ Visual Studio Code(AUR)
++ Visual Studio Code (visual-studio-code-bin) [AUR]
 + Nautilus
-+ Discord(AUR)
++ Discord [AUR]
 + Gimp
 + Feh
-+ Mirage(AUR)
++ Mirage [AUR]
 + Libre Office
 + Evince
-+ Transmission
-+ Network Manager / Network Manager Applet
-+ Pulseaudio / Pavucontrol
++ Transmission (transmission-gtk)
++ Network Manager
++ Network Manager Applet
++ Pulseaudio
++ Pavucontrol
 + LxAppearance
 + Galculator
-+ Spotify(AUR)
++ Spotify [AUR]
 + Cmus
-+ Cava(AUR)
++ Cava [AUR]
 + Scrot
 + Neofetch
 + Cmatrix
 + Htop
 + Cups / Cups-PDF
-+ DejaVu Font
-+ Font Awesome 4.7(AUR)
++ DejaVu Font (ttf-dejavu)
++ Font Awesome 4.7 (ttf-font-awesome-4) [AUR]
