@@ -227,8 +227,8 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 # launch nautilus
 bindsym $mod+n exec --no-startup-id nautilus
 
-# launch cmus and cava
-bindsym $mod+m exec --no-startup-id urxvt -e cmus; focus; split v; exec --no-startup-id "sh -c 'sleep 0.1; exec urxvt -e cava'"
+# launch spotify
+bindsym $mod+m exec --no-startup-id spotify
 
 # launch gimp
 bindsym $mod+g exec --no-startup-id gimp
@@ -251,5 +251,5 @@ exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id wal -c -i ~/Pictures/Wallpaper.jpg
-exec_always --no-startup-id ~/.config/polybar/polylaunch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id firefox

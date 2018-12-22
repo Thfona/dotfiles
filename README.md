@@ -32,8 +32,6 @@ These are the dotfiles for my Arch Linux configuration.
 + LxAppearance
 + Galculator
 + Spotify [AUR]
-+ Cmus
-+ Cava [AUR]
 + Scrot
 + Neofetch
 + Cmatrix
