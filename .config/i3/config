@@ -34,9 +34,6 @@ bindsym $mod+Return exec --no-startup-id urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi
-bindsym $mod+d exec --no-startup-id rofi -show run
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -99,31 +96,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
+# resize windows
+bindsym $mod+Shift+y exec --no-startup-id i3resize left
+bindsym $mod+Shift+u exec --no-startup-id i3resize down
+bindsym $mod+Shift+i exec --no-startup-id i3resize up
+bindsym $mod+Shift+o exec --no-startup-id i3resize right
 
 # lock screen
 bindsym $mod+z exec --no-startup-id ~/.config/i3/lock.sh
@@ -182,14 +159,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # workspace assignments
 assign [class="Firefox"] $ws1
 assign [class="Code"] $ws3
-assign [class="Nautilus"] $ws4
 assign [class="discord"] $ws6
 assign [class="Gimp"] $ws7
 assign [class="feh"] $ws7
-assign [class="Mirage"] $ws7
 assign [instance="libreoffice"] $ws9
-assign [class="Evince"] $ws9
-assign [class="Transmission-gtk"] $ws10
+assign [class="Zathura"] $ws9
 
 
 ####################
@@ -203,9 +177,7 @@ floating_maximum_size 800 x 600
 for_window [class="Firefox" instance="Places"] floating enable border pixel 3
 for_window [class="Firefox" instance="Toplevel"] floating enable border pixel 3
 for_window [class="Nm-connection-editor"] floating enable border pixel 3
-for_window [class="Pavucontrol"] floating enable border pixel 3
 for_window [class="Lxappearance"] floating enable border pixel 3
-for_window [class="Galculator"] floating enable border pixel 3
 
 # floating disabled windows
 # for_window [class=""] floating disable
@@ -215,17 +187,17 @@ for_window [class="Galculator"] floating enable border pixel 3
 # Application Shortcuts #
 #########################
 
-# launch galculator
-bindsym $mod+c exec --no-startup-id galculator
+# launch rofi
+bindsym $mod+d exec --no-startup-id rofi -show run
 
-# launch neofetch
-bindsym $mod+Shift+n exec --no-startup-id urxvt -e ~/.config/neofetch/neolaunch.sh
+# launch r
+bindsym $mod+c exec --no-startup-id R -q --no-save
 
-# launch pavucontrol
-bindsym $mod+p exec --no-startup-id pavucontrol
+# launch pulsemixer
+bindsym $mod+p exec --no-startup-id urxvt -e pulsemixer
 
-# launch nautilus
-bindsym $mod+n exec --no-startup-id nautilus
+# launch ranger
+bindsym $mod+r exec --no-startup-id urxvt -e ranger
 
 # launch spotify
 bindsym $mod+m exec --no-startup-id spotify
@@ -236,11 +208,11 @@ bindsym $mod+g exec --no-startup-id gimp
 # launch libreoffice
 bindsym $mod+o exec --no-startup-id libreoffice
 
-# launch evince
-bindsym $mod+Shift+p exec --no-startup-id evince
+# launch zathura
+bindsym $mod+Shift+p exec --no-startup-id zathura
 
-# launch transmission
-bindsym $mod+t exec --no-startup-id transmission-gtk
+# launch rtorrent
+bindsym $mod+t exec --no-startup-id urxvt -e rtorrent
 
 
 ########################
@@ -250,6 +222,5 @@ bindsym $mod+t exec --no-startup-id transmission-gtk
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id wal -c -i ~/Pictures/Wallpaper.jpg
+exec_always --no-startup-id wal -i ~/Pictures/Wallpaper.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id firefox

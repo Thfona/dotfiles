@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Take a screenshot
 scrot /tmp/screen.png

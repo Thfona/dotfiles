@@ -14,27 +14,25 @@ These are the dotfiles for my Arch Linux configuration.
 + Compton
 + Rofi
 + Pywal (python-pywal)
-+ Aurman [AUR]
++ Yay [AUR]
 + Firefox
 + Visual Studio Code (visual-studio-code-bin) [AUR]
-+ Nautilus
++ Ranger
 + Discord [AUR]
 + Gimp
 + Feh
-+ Mirage [AUR]
 + Libre Office
-+ Evince
-+ Transmission (transmission-gtk)
++ Zathura
++ Rtorrent
 + Network Manager
 + Network Manager Applet
 + Pulseaudio
-+ Pavucontrol
++ Pulsemixer
 + LxAppearance
-+ Galculator
++ R
 + Spotify [AUR]
 + Scrot
 + Neofetch
-+ Cmatrix
 + Htop
 + Cups
 + Cups-PDF
