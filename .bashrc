@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias ll='ls -al'
 PS1='[\u@\h \W]\$ '
 
 # Define vim as the default text editor
@@ -16,3 +17,6 @@ export EDITOR
 
 # Import pywal theme
 cat ~/.cache/wal/sequences
+
+# Go to home directory
+cd $HOME
