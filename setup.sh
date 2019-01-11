@@ -50,12 +50,12 @@ install_packages() {
         case $vd in
             1) videodriver="xf86-video-intel"; break;;
             2) videodriver="xf86-video-ati"; break;;
-            3) videodriver="nvidia"; break;;
+            3) videodriver="nvidia nvidia-utils lib32-nvidia-utils"; break;;
             *) echo "> Invalid Input";;
         esac
     done
 
-    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps mesa i3-gaps i3lock xdg-user-dirs pulseaudio pulseaudio-alsa pulsemixer pavucontrol "$videodriver" rxvt-unicode compton rofi python-pywal firefox vim ranger gimp feh libre-office zathura rtorrent lxappearance r scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
+    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps mesa i3-gaps i3lock xdg-user-dirs pulseaudio pulseaudio-alsa pulsemixer pavucontrol "$videodriver" rxvt-unicode compton rofi python-pywal firefox vim ranger gimp feh libre-office zathura rtorrent lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
 
     setup_aur
 
