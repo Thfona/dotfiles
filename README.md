@@ -16,10 +16,12 @@ These are the dotfiles for my Arch Linux configuration.
 + Pywal (python-pywal)
 + Yay [AUR]
 + Firefox
++ Vim
 + Visual Studio Code (visual-studio-code-bin) [AUR]
 + Ranger
 + Discord [AUR]
 + Gimp
++ Dunst
 + Feh
 + Libre Office
 + Zathura
@@ -30,6 +32,7 @@ These are the dotfiles for my Arch Linux configuration.
 + Pulsemixer
 + LxAppearance
 + R
++ Steam
 + Spotify [AUR]
 + Scrot
 + Neofetch
@@ -38,3 +41,4 @@ These are the dotfiles for my Arch Linux configuration.
 + Cups-PDF
 + DejaVu Font (ttf-dejavu)
 + Font Awesome 4.7 (ttf-font-awesome-4) [AUR]
++ Arc Theme (arc-solid-gtk-theme arc-icon-theme)
