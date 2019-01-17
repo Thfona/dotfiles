@@ -12,7 +12,7 @@ create_symlinks() {
     echo "> Created $wallpaperlink"
 
     # home dotfiles
-    DOTFILES1=(".bash_profile" ".bashrc" ".gtkrc-2.0" ".xinitrc" ".Xresources")
+    DOTFILES1=(".bash_profile" ".bashrc" ".gtkrc-2.0" ".vimrc" ".xinitrc" ".Xresources")
 
     for dotfile in "${DOTFILES1[@]}"; do
         dotfilelink="${HOME}/${dotfile}"
@@ -55,7 +55,7 @@ install_packages() {
         esac
     done
 
-    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps mesa i3-gaps i3lock xdg-user-dirs pulseaudio pulseaudio-alsa pulsemixer pavucontrol "$videodriver" rxvt-unicode compton rofi python-pywal firefox vim ranger gimp feh libre-office zathura rtorrent lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
+    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps xdg-user-dirs mesa w3m "$videodriver" python nodejs i3-gaps i3lock rxvt-unicode compton rofi python-pywal firefox vim ranger mpv gimp dunst feh libre-office zathura rtorrent pulseaudio pulseaudio-alsa pulsemixer lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
 
     setup_aur
 

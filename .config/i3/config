@@ -70,10 +70,10 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split) --disabled
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -159,13 +159,15 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # workspace assignments
 assign [class="Firefox"] $ws1
 assign [class="Code"] $ws3
-assign [class="Steam"] $ws4
-assign [class="Spotify"] $ws5
-assign [class="discord"] $ws6
-assign [class="Gimp"] $ws7
-assign [class="feh"] $ws7
+assign [instance="ranger"] $ws4
+assign [class="Steam"] $ws5
+for_window [class="Spotify"] move to workspace $ws6
+assign [class="discord"] $ws7
+assign [class="Gimp"] $ws8
+assign [class="feh"] $ws8
 assign [instance="libreoffice"] $ws9
 assign [class="Zathura"] $ws9
+assign [instance="rtorrent"] $ws10
 
 
 ####################
@@ -180,9 +182,11 @@ for_window [class="Firefox" instance="Places"] floating enable border pixel 3
 for_window [class="Firefox" instance="Toplevel"] floating enable border pixel 3
 for_window [class="Nm-connection-editor"] floating enable border pixel 3
 for_window [class="Lxappearance"] floating enable border pixel 3
-
-# floating disabled windows
-# for_window [class=""] floating disable
+for_window [instance="floating_*"] floating enable
+for_window [instance="floating_*"] move scratchpad
+for_window [instance="floating_*"] resize set 800 600
+for_window [instance="floating_*"] border pixel 3
+for_window [instance="floating_*"] move position center
 
 
 #########################
@@ -192,14 +196,17 @@ for_window [class="Lxappearance"] floating enable border pixel 3
 # launch rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
 
-# launch r
-bindsym $mod+c exec --no-startup-id R -q --no-save
+# launch floating terminal
+bindsym $mod+Shift+Return exec --no-startup-id ~/.config/i3/spspawn.sh "terminal"
+
+# launch calculator
+bindsym $mod+c exec --no-startup-id ~/.config/i3/spspawn.sh "calculator" "-e R -q --no-save"
 
 # launch pulsemixer
-bindsym $mod+p exec --no-startup-id urxvt -e pulsemixer
+bindsym $mod+p exec --no-startup-id ~/.config/i3/spspawn.sh "mixer" "-e pulsemixer"
 
 # launch ranger
-bindsym $mod+r exec --no-startup-id urxvt -e ranger
+bindsym $mod+r exec --no-startup-id urxvt -name ranger -e ranger
 
 # launch spotify
 bindsym $mod+m exec --no-startup-id spotify
@@ -214,7 +221,7 @@ bindsym $mod+o exec --no-startup-id libreoffice
 bindsym $mod+Shift+p exec --no-startup-id zathura
 
 # launch rtorrent
-bindsym $mod+t exec --no-startup-id urxvt -e rtorrent
+bindsym $mod+t exec --no-startup-id urxvt -name rtorrent -e rtorrent
 
 
 ########################
