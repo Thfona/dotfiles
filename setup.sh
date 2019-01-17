@@ -55,7 +55,7 @@ install_packages() {
         esac
     done
 
-    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps xdg-user-dirs mesa w3m "$videodriver" python nodejs i3-gaps i3lock rxvt-unicode compton rofi python-pywal firefox vim ranger mpv gimp dunst feh libre-office zathura rtorrent pulseaudio pulseaudio-alsa pulsemixer lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
+    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps xdg-user-dirs mesa w3m $videodriver python nodejs i3-gaps i3lock rxvt-unicode compton rofi python-pywal firefox vim ranger mpv gimp dunst feh libreoffice zathura rtorrent pulseaudio pulseaudio-alsa pulsemixer lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
 
     setup_aur
 
