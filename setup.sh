@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Personal system setup script
+
 # repository path
 DIR="${HOME}/Documents/GitHub/dotfiles"
 
@@ -59,7 +61,7 @@ install_packages() {
 
     setup_aur
 
-    yay -S polybar visual-studio-code-bin discord spotify ttf-font-awesome-4
+    yay -S wd719x-firmware aic94xx-firmware polybar visual-studio-code-bin discord spotify ttf-font-awesome-4
 
     echo "> Packages successfully installed..."
 
