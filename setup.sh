@@ -14,7 +14,7 @@ create_symlinks() {
     echo "> Created $wallpaperlink"
 
     # home dotfiles
-    DOTFILES1=(".bash_profile" ".bashrc" ".gtkrc-2.0" ".vimrc" ".xinitrc" ".Xresources")
+    DOTFILES1=(".bash_profile" ".bashrc" ".gtkrc-2.0" ".rtorrent.rc" ".vimrc" ".xinitrc" ".Xresources")
 
     for dotfile in "${DOTFILES1[@]}"; do
         dotfilelink="${HOME}/${dotfile}"
