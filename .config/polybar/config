@@ -12,8 +12,8 @@ alert = #bd2c40
 underline =
 
 
-[bar/example]
-monitor = DVI-D-0
+[bar/main]
+monitor = ${env:MONITOR:}
 width = 100%
 height = 28
 radius = 0

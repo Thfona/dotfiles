@@ -197,13 +197,13 @@ for_window [instance="floating_*"] move position center
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # launch floating terminal
-bindsym $mod+Shift+Return exec --no-startup-id ~/.config/i3/spspawn.sh "terminal"
+bindsym $mod+Shift+Return exec --no-startup-id ~/.config/i3/spawn-scratchpad.sh "terminal"
 
 # launch calculator
-bindsym $mod+c exec --no-startup-id ~/.config/i3/spspawn.sh "calculator" "-e R -q --no-save"
+bindsym $mod+c exec --no-startup-id ~/.config/i3/spawn-scratchpad.sh "calculator" "-e R -q --no-save"
 
 # launch pulsemixer
-bindsym $mod+p exec --no-startup-id ~/.config/i3/spspawn.sh "mixer" "-e pulsemixer"
+bindsym $mod+p exec --no-startup-id ~/.config/i3/spawn-scratchpad.sh "mixer" "-e pulsemixer"
 
 # launch ranger
 bindsym $mod+r exec --no-startup-id urxvt -name ranger -e ranger

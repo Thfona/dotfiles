@@ -1,0 +1,61 @@
+# system-core
+alsa-utils
+xorg-server
+xorg-xinit
+xorg-apps
+xdg-user-dirs
+mesa
+pulseaudio
+pulseaudio-alsa
+pulsemixer
+rxvt-unicode
+
+
+# system-base
+i3-gaps
+i3lock
+compton
+gvfs
+w3m
+unrar
+dunst
+rofi
+ranger
+scrot
+feh
+r
+
+
+# system-utils
+htop
+cups
+cups-pdf
+
+
+# theming
+lxappearance
+ttf-dejavu
+arc-solid-gtk-theme
+arc-icon-theme
+python-pywal
+
+
+# development-tools
+vim
+nodejs
+python
+dotnet-runtime
+dotnet-sdk
+dotnet-host
+
+
+# media
+firefox
+mpv
+gimp
+steam
+neofetch
+libreoffice
+zathura
+zathura-pdf-poppler
+rtorrent

@@ -3,7 +3,7 @@
 # Personal system setup script
 
 # repository path
-DIR="${HOME}/Documents/GitHub/dotfiles"
+DIR="$(dirname $(realpath $0))"
 
 create_symlinks() {
     echo "> Creating symbolic links..."
@@ -57,11 +57,11 @@ install_packages() {
         esac
     done
 
-    sudo pacman -S alsa-utils xorg-server xorg-xinit xorg-apps xdg-user-dirs mesa gvfs w3m unrar $videodriver python nodejs dotnet-runtime dotnet-sdk dotnet-host i3-gaps i3lock rxvt-unicode compton rofi python-pywal firefox vim ranger mpv gimp dunst feh libreoffice zathura zathura-pdf-poppler rtorrent pulseaudio pulseaudio-alsa pulsemixer lxappearance r steam scrot neofetch htop cups cups-pdf ttf-dejavu arc-solid-gtk-theme arc-icon-theme
+    sudo pacman -S $videodriver 
 
     setup_aur
 
-    yay -S wd719x-firmware aic94xx-firmware polybar visual-studio-code-bin discord spotify ttf-font-awesome-4
+    yay -S 
 
     echo "> Packages successfully installed..."
 
