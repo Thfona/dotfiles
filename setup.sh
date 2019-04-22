@@ -57,13 +57,13 @@ install_packages() {
         esac
     done
 
-    package_list=$(get_packages "package-list")
+    package_list=$(get_packages "${DIR}/package-list")
 
     sudo pacman -S $package_list $videodriver
 
     setup_aur
 
-    package_list_aur=$(get_packages "package-list-aur")
+    package_list_aur=$(get_packages "${DIR}/package-list-aur")
 
     yay -S $package_list_aur
 
