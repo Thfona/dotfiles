@@ -39,7 +39,7 @@ create_symlinks() {
         echo "> Created ${HOME}/.config/${dotfile}"
     done
 
-    echo "> Symbolic links successfully created!"
+    echo "> Symbolic links created successfully!"
 
     return 0
 }
@@ -57,13 +57,31 @@ install_packages() {
         esac
     done
 
-    sudo pacman -S $videodriver 
+    package_list=$(get_packages "package-list")
+
+    sudo pacman -S $package_list $videodriver
 
     setup_aur
 
-    yay -S 
+    package_list_aur=$(get_packages "package-list-aur")
 
-    echo "> Packages successfully installed..."
+    yay -S $package_list_aur
+
+    echo "> Packages installed successfully!"
+
+    return 0
+}
+
+get_packages() {
+    packages=""
+
+	while read -r line; do
+        if [[ "${#line}" -gt 0 ]] && [[ ! "${line}" =~ "#" ]]; then
+            packages="${packages} ${line}"
+        fi
+    done < $1
+
+	echo $packages
 
     return 0
 }
@@ -84,8 +102,10 @@ setup_aur() {
 
 set_keymap() {
     read -p "> Choose keymap region: " keyregion
-    
+
     localectl set-x11-keymap "$keyregion"
+
+    echo "> Keymap set successfully!"
 
     return 0
 }
