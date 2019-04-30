@@ -43,10 +43,14 @@ python-pywal
 # development-tools
 vim
 nodejs
+npm
 python
+python-pip
+aspnet-runtime
 dotnet-runtime
 dotnet-sdk
 dotnet-host
+nuget
 
 
 # media
