@@ -59,6 +59,8 @@ install_packages() {
 
     package_list=$(get_packages "${DIR}/package-list")
 
+    sudo pacman -Syy
+
     sudo pacman -S $package_list $videodriver
 
     setup_aur
@@ -87,6 +89,8 @@ get_packages() {
 }
 
 setup_aur() {
+    rm -rf yay
+    
     git clone https://aur.archlinux.org/yay.git
 
     cd yay
