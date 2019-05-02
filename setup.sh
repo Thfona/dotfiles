@@ -14,29 +14,25 @@ create_symlinks() {
     echo "> Created $wallpaperlink"
 
     # home dotfiles
-    DOTFILES1=(".bash_profile" ".bashrc" ".gtkrc-2.0" ".rtorrent.rc" ".vimrc" ".xinitrc" ".Xresources")
-
-    for dotfile in "${DOTFILES1[@]}"; do
-        dotfilelink="${HOME}/${dotfile}"
-        ln -sf "${DIR}/${dotfile}" "$dotfilelink"
+    for dotfile in "$(ls -pd ${DIR}/.!(|.) | egrep -v /$)"; do
+        dotfilename="$(basename ${dotfile})"
+        dotfilelink="${HOME}/${dotfilename}"
+        ln -sf "${dotfile}" "$dotfilelink"
         echo "> Created $dotfilelink"
     done
 
     # .config dotfiles
-    DOTFILES2=("compton.conf" "user-dirs.dirs")
-
-    for dotfile in "${DOTFILES2[@]}"; do
-        dotfilelink="${HOME}/.config/${dotfile}"
-        ln -sf "${DIR}/.config/${dotfile}" "$dotfilelink"
+    for dotfile in "$(ls -pd ${DIR}/.config/* | egrep -v /$)"; do
+        dotfilename="$(basename ${dotfile})"
+        dotfilelink="${HOME}/.config/${dotfilename}"
+        ln -sf "${dotfile}" "$dotfilelink"
         echo "> Created $dotfilelink"
     done
 
     # .config directories
-    DOTFILES3=("dunst" "gtk-3.0" "i3" "neofetch" "polybar" "ranger" "rofi")
-
-    for dotfile in "${DOTFILES3[@]}"; do
-        ln -sf "${DIR}/.config/${dotfile}" "${HOME}/.config"
-        echo "> Created ${HOME}/.config/${dotfile}"
+    for dotfile in "$(ls -pd ${DIR}/.config/* | egrep /$)"; do
+        ln -sf "${dotfile}" "${HOME}/.config"
+        echo "> Created ${HOME}/.config/$(basename ${dotfile})"
     done
 
     echo "> Symbolic links created successfully!"
@@ -50,9 +46,9 @@ install_packages() {
     while true; do
         read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
         case $vd in
-            1) videodriver="xf86-video-intel"; break;;
-            2) videodriver="xf86-video-ati"; break;;
-            3) videodriver="nvidia nvidia-utils lib32-nvidia-utils"; break;;
+            1) videodriver="xf86-video-intel vulkan-intel lib32-vulkan-intel"; break;;
+            2) videodriver="xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon"; break;;
+            3) videodriver="nvidia nvidia-utils lib32-nvidia-utils nvidia-settings"; break;;
             *) echo "> Invalid Input";;
         esac
     done

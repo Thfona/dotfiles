@@ -5,6 +5,7 @@ xorg-xinit
 xorg-apps
 xdg-user-dirs
 mesa
+lib32-mesa
 pulseaudio
 pulseaudio-alsa
 pulsemixer
@@ -61,6 +62,5 @@ gimp
 steam
 neofetch
 libreoffice
-zathura
-zathura-pdf-poppler
-rtorrent
+evince
+transmission
