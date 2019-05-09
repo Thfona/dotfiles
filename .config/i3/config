@@ -167,7 +167,7 @@ assign [class="Gimp"] $ws8
 assign [class="feh"] $ws8
 assign [instance="libreoffice"] $ws9
 assign [class="Zathura"] $ws9
-assign [instance="rtorrent"] $ws10
+assign [instance="transmission"] $ws10
 
 
 ####################
@@ -208,6 +208,9 @@ bindsym $mod+p exec --no-startup-id ~/.config/i3/spawn-scratchpad.sh "mixer" "-e
 # launch ranger
 bindsym $mod+r exec --no-startup-id urxvt -name ranger -e ranger
 
+# launch nautilus
+bindsym $mod+n exec --no-startup-id nautilus
+
 # launch spotify
 bindsym $mod+m exec --no-startup-id spotify
 
@@ -220,8 +223,8 @@ bindsym $mod+o exec --no-startup-id libreoffice
 # launch zathura
 bindsym $mod+Shift+p exec --no-startup-id zathura
 
-# launch rtorrent
-bindsym $mod+t exec --no-startup-id urxvt -name rtorrent -e rtorrent
+# launch transmission
+bindsym $mod+t exec --no-startup-id transmission
 
 
 ########################
