@@ -18,5 +18,7 @@ export EDITOR
 # Import pywal theme
 cat ~/.cache/wal/sequences
 
-# Go to home directory
-cd $HOME
+# Go to home directory if using dotfiles directory
+if [[ "$PWD" = *"/dotfiles" ]]; then
+  cd $HOME
+fi
