@@ -73,13 +73,13 @@ install_packages() {
 get_packages() {
     packages=""
 
-	while read -r line; do
+    while read -r line; do
         if [[ "${#line}" -gt 0 ]] && [[ ! "${line}" =~ "#" ]]; then
             packages="${packages} ${line}"
         fi
     done < $1
 
-	echo $packages
+    echo $packages
 
     return 0
 }

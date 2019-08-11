@@ -21,7 +21,6 @@ w3m
 unrar
 dunst
 rofi
-ranger
 nautilus
 scrot
 feh
@@ -57,7 +56,7 @@ nuget
 
 # media
 firefox
-mpv
+vlc
 gimp
 steam
 neofetch
