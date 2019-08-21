@@ -44,7 +44,7 @@ python-pywal
 # development-tools
 vim
 nodejs
-npm
+yarn
 python
 python-pip
 aspnet-runtime
