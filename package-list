@@ -1,29 +1,16 @@
 # system-core
 alsa-utils
+wayland
 xorg-server
 xorg-xinit
-xorg-apps
 xdg-user-dirs
-mesa
-lib32-mesa
 pulseaudio
 pulseaudio-alsa
-pulsemixer
-rxvt-unicode
 
 
 # system-base
-i3-gaps
-i3lock
-compton
-gvfs
-w3m
 unrar
-dunst
-rofi
-nautilus
 scrot
-feh
 r
 
 
@@ -34,17 +21,16 @@ cups-pdf
 
 
 # theming
-lxappearance
 ttf-dejavu
 arc-solid-gtk-theme
 arc-icon-theme
-python-pywal
 
 
 # development-tools
 vim
 nodejs
 npm
+yarn
 python
 python-pip
 aspnet-runtime
@@ -52,6 +38,7 @@ dotnet-runtime
 dotnet-sdk
 dotnet-host
 nuget
+love
 
 
 # media
@@ -59,7 +46,7 @@ firefox
 vlc
 gimp
 steam
+discord
 neofetch
-libreoffice
 evince
 transmission-gtk
