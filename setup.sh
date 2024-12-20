@@ -8,11 +8,6 @@ DIR="$(dirname $(realpath $0))"
 create_symlinks() {
     echo "> Creating symbolic links..."
 
-    # wallpaper
-    wallpaperlink="${HOME}/Pictures/Wallpaper.jpg"
-    ln -sf "${DIR}/Wallpaper.jpg" "$wallpaperlink"
-    echo "> Created $wallpaperlink"
-
     # home dotfiles
     for dotfile in "$(ls -pd ${DIR}/.!(|.) | egrep -v /$)"; do
         dotfilename="$(basename ${dotfile})"
@@ -46,9 +41,9 @@ install_packages() {
     while true; do
         read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
         case $vd in
-            1) videodriver="xf86-video-intel vulkan-intel lib32-vulkan-intel"; break;;
-            2) videodriver="xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon"; break;;
-            3) videodriver="nvidia nvidia-utils lib32-nvidia-utils nvidia-settings"; break;;
+            1) videodriver="mesa"; break;;
+            2) videodriver="mesa"; break;;
+            3) videodriver="mesa nvidia nvidia-utils nvidia-settings"; break;;
             *) echo "> Invalid Input";;
         esac
     done
