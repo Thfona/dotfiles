@@ -1,6 +1,6 @@
-# Thfona's Arch Linux dotfiles
+# Linux dotfiles
 
-These are the dotfiles for my Arch Linux configuration.
+These are the dotfiles for my Linux configuration.
 
 ## Setup
 
