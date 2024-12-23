@@ -1,11 +1,11 @@
 # system-core
-alsa-utils
 wayland
 xorg-server
 xorg-xinit
 xdg-user-dirs
-pulseaudio
-pulseaudio-alsa
+alsa-utils
+pipewire
+pipewire-alsa
 
 
 # system-base
@@ -20,12 +20,6 @@ cups
 cups-pdf
 
 
-# theming
-ttf-dejavu
-arc-solid-gtk-theme
-arc-icon-theme
-
-
 # development-tools
 vim
 nodejs
@@ -38,6 +32,7 @@ dotnet-runtime
 dotnet-sdk
 dotnet-host
 nuget
+lua
 love
 
 
@@ -49,4 +44,4 @@ steam
 discord
 neofetch
 evince
-transmission-gtk
+qbittorrent

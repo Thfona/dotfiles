@@ -10,23 +10,28 @@ create_symlinks() {
 
     # home dotfiles
     for dotfile in "$(ls -pd ${DIR}/.!(|.) | egrep -v /$)"; do
-        dotfilename="$(basename ${dotfile})"
-        dotfilelink="${HOME}/${dotfilename}"
-        ln -sf "${dotfile}" "$dotfilelink"
-        echo "> Created $dotfilelink"
+        dotfile_name="$(basename ${dotfile})"
+        dotfile_link="${HOME}/${dotfile_name}"
+
+        ln -sf "${dotfile}" "$dotfile_link"
+
+        echo "> Created $dotfile_link"
     done
 
     # .config dotfiles
     for dotfile in "$(ls -pd ${DIR}/.config/* | egrep -v /$)"; do
-        dotfilename="$(basename ${dotfile})"
-        dotfilelink="${HOME}/.config/${dotfilename}"
-        ln -sf "${dotfile}" "$dotfilelink"
-        echo "> Created $dotfilelink"
+        dotfile_name="$(basename ${dotfile})"
+        dotfile_link="${HOME}/.config/${dotfile_name}"
+
+        ln -sf "${dotfile}" "$dotfile_link"
+
+        echo "> Created $dotfile_link"
     done
 
     # .config directories
     for dotfile in "$(ls -pd ${DIR}/.config/* | egrep /$)"; do
         ln -sf "${dotfile}" "${HOME}/.config"
+
         echo "> Created ${HOME}/.config/$(basename ${dotfile})"
     done
 
@@ -41,9 +46,9 @@ install_packages() {
     while true; do
         read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
         case $vd in
-            1) videodriver="mesa"; break;;
-            2) videodriver="mesa"; break;;
-            3) videodriver="mesa nvidia nvidia-utils nvidia-settings"; break;;
+            1) video_driver="mesa"; break;;
+            2) video_driver="mesa"; break;;
+            3) video_driver="mesa nvidia nvidia-utils nvidia-settings"; break;;
             *) echo "> Invalid Input";;
         esac
     done
@@ -52,7 +57,7 @@ install_packages() {
 
     sudo pacman -Syy
 
-    sudo pacman -S $package_list $videodriver
+    sudo pacman -S $package_list $video_driver
 
     setup_aur
 
@@ -81,6 +86,8 @@ get_packages() {
 
 setup_aur() {
     rm -rf yay
+
+    sudo pacman -S --needed git base-devel
     
     git clone https://aur.archlinux.org/yay.git
 
@@ -129,20 +136,20 @@ main() {
     done
 
     while true; do
-        read -p "> Setup X.org keymap? [Y/n] " xk
+        read -p "> Setup X.org keymap? [y/N] " xk
         case $xk in
             [Yy]*) set_keymap; break;;
-            "") set_keymap; break;;
+            "") break;;
             [Nn]*) break;;
             *) echo "> Invalid Input";;
         esac
     done
 
     while true; do
-        read -p "> Setup user directories? [Y/n] " ud
+        read -p "> Setup user directories? [y/N] " ud
         case $ud in
             [Yy]*) xdg-user-dirs-update; break;;
-            "") xdg-user-dirs-update; break;;
+            "") break;;
             [Nn]*) break;;
             *) echo "> Invalid Input";;
         esac
