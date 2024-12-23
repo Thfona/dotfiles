@@ -45,12 +45,17 @@ dotnet-host
 nuget
 lua
 love
+godot-mono
 
 
 # media
 firefox
 vlc
+audacity
 gimp
+blender
+krita
+inkscape
 steam
 discord
 neofetch
