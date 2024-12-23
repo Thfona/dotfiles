@@ -9,8 +9,17 @@ pipewire-alsa
 
 
 # system-base
+plasma-meta
+konsole
+kate
+dolphin
+ark
+plasma-workspace
+elisa
+kcalc
 unrar
 scrot
+fwupd
 r
 
 
@@ -21,6 +30,8 @@ cups-pdf
 
 
 # development-tools
+git
+nano
 vim
 nodejs
 npm
@@ -45,3 +56,12 @@ discord
 neofetch
 evince
 qbittorrent
+kdenlive
+ffmpeg
+ffmpegthumbs
+gst-plugins-base
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-ugly
+gst-libav
+gstreamer

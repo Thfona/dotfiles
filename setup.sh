@@ -40,36 +40,6 @@ create_symlinks() {
     return 0
 }
 
-install_packages() {
-    echo "> Installing packages..."
-
-    while true; do
-        read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
-        case $vd in
-            1) video_driver="mesa"; break;;
-            2) video_driver="mesa"; break;;
-            3) video_driver="mesa nvidia nvidia-utils nvidia-settings"; break;;
-            *) echo "> Invalid Input";;
-        esac
-    done
-
-    package_list=$(get_packages "${DIR}/package-list")
-
-    sudo pacman -Syy
-
-    sudo pacman -S $package_list $video_driver
-
-    setup_aur
-
-    package_list_aur=$(get_packages "${DIR}/package-list-aur")
-
-    yay -S $package_list_aur
-
-    echo "> Packages installed successfully!"
-
-    return 0
-}
-
 get_packages() {
     packages=""
 
@@ -102,12 +72,32 @@ setup_aur() {
     return 0
 }
 
-set_keymap() {
-    read -p "> Choose keymap region: " keyregion
+install_packages() {
+    echo "> Installing packages..."
 
-    localectl set-x11-keymap "$keyregion"
+    while true; do
+        read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
+        case $vd in
+            1) video_driver="mesa"; break;;
+            2) video_driver="mesa"; break;;
+            3) video_driver="mesa nvidia nvidia-utils nvidia-settings"; break;;
+            *) echo "> Invalid Input";;
+        esac
+    done
 
-    echo "> Keymap set successfully!"
+    package_list=$(get_packages "${DIR}/package-list")
+
+    sudo pacman -Syy
+
+    sudo pacman -S $package_list $video_driver
+
+    setup_aur
+
+    package_list_aur=$(get_packages "${DIR}/package-list-aur")
+
+    yay -S $package_list_aur
+
+    echo "> Packages installed successfully!"
 
     return 0
 }
@@ -130,26 +120,6 @@ main() {
         case $pi in
             [Yy]*) install_packages; break;;
             "") install_packages; break;;
-            [Nn]*) break;;
-            *) echo "> Invalid Input";;
-        esac
-    done
-
-    while true; do
-        read -p "> Setup X.org keymap? [y/N] " xk
-        case $xk in
-            [Yy]*) set_keymap; break;;
-            "") break;;
-            [Nn]*) break;;
-            *) echo "> Invalid Input";;
-        esac
-    done
-
-    while true; do
-        read -p "> Setup user directories? [y/N] " ud
-        case $ud in
-            [Yy]*) xdg-user-dirs-update; break;;
-            "") break;;
             [Nn]*) break;;
             *) echo "> Invalid Input";;
         esac
