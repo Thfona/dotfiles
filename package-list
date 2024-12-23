@@ -1,4 +1,5 @@
 # system-core
+mesa
 wayland
 xorg-server
 xorg-xinit
