@@ -75,21 +75,11 @@ setup_aur() {
 install_packages() {
     echo "> Installing packages..."
 
-    while true; do
-        read -p "> Choose which video driver to install (1: Intel, 2: AMD, 3: Nvidia): " vd
-        case $vd in
-            1) video_driver="mesa"; break;;
-            2) video_driver="mesa"; break;;
-            3) video_driver="mesa nvidia nvidia-utils nvidia-settings"; break;;
-            *) echo "> Invalid Input";;
-        esac
-    done
-
     package_list=$(get_packages "${DIR}/package-list")
 
     sudo pacman -Syy
 
-    sudo pacman -S $package_list $video_driver
+    sudo pacman -S $package_list
 
     setup_aur
 
