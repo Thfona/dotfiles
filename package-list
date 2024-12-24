@@ -7,6 +7,7 @@ xdg-user-dirs
 alsa-utils
 pipewire
 pipewire-alsa
+man-db
 
 
 # system-base
