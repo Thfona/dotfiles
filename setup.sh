@@ -9,7 +9,7 @@ create_symlinks() {
     echo "> Creating symbolic links..."
 
     # home dotfiles
-    for dotfile in "$(ls -pd ${DIR}/.!(|.) | egrep -v /$)"; do
+    for dotfile in "$(ls -pd ${DIR}/.!(|.) | grep -Ev /$)"; do
         dotfile_name="$(basename ${dotfile})"
         dotfile_link="${HOME}/${dotfile_name}"
 
@@ -19,7 +19,7 @@ create_symlinks() {
     done
 
     # .config dotfiles
-    for dotfile in "$(ls -pd ${DIR}/.config/* | egrep -v /$)"; do
+    for dotfile in "$(ls -pd ${DIR}/.config/* | grep -Ev /$)"; do
         dotfile_name="$(basename ${dotfile})"
         dotfile_link="${HOME}/.config/${dotfile_name}"
 
@@ -29,7 +29,7 @@ create_symlinks() {
     done
 
     # .config directories
-    for dotfile in "$(ls -pd ${DIR}/.config/* | egrep /$)"; do
+    for dotfile in "$(ls -pd ${DIR}/.config/* | grep -E /$)"; do
         ln -sf "${dotfile}" "${HOME}/.config"
 
         echo "> Created ${HOME}/.config/$(basename ${dotfile})"
