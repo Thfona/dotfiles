@@ -9,7 +9,7 @@ create_symlinks() {
     echo "> Creating symbolic links..."
 
     # home dotfiles
-    for dotfile in "$(ls -pd ${DIR}/.!(|.) | grep -Ev /$)"; do
+    for dotfile in "$(ls -pd ${DIR}/.* | grep -Ev /$)"; do
         dotfile_name="$(basename ${dotfile})"
         dotfile_link="${HOME}/${dotfile_name}"
 
