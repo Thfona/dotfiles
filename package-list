@@ -17,10 +17,11 @@ kate
 dolphin
 ark
 plasma-workspace
+partitionmanager
 kcalc
 gwenview
 elisa
-marknote
+obsidian
 unrar
 scrot
 fwupd
@@ -50,6 +51,9 @@ nuget
 lua
 love
 godot-mono
+intellij-idea-community-edition
+pycharm-community-edition
+dbeaver
 
 
 # media
