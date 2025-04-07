@@ -1,8 +1,14 @@
+# system-utils
+openhardwaremonitor
+
+
 # development-tools
 powershell-bin
 visual-studio-code-bin
 postman-bin
+rancher-desktop
 
 
 # media
+google-chrome
 spotify
