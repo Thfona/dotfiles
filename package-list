@@ -24,14 +24,16 @@ elisa
 obsidian
 unrar
 scrot
+flameshot
 fwupd
 r
 
 
 # system-utils
-htop
+glances
 cups
 cups-pdf
+cpu-x
 
 
 # development-tools
@@ -54,6 +56,7 @@ godot-mono
 intellij-idea-community-edition
 pycharm-community-edition
 dbeaver
+ollama
 
 
 # media
