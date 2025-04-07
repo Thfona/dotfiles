@@ -26,7 +26,7 @@ unrar
 scrot
 flameshot
 fwupd
-r
+wine
 
 
 # system-utils
@@ -56,6 +56,7 @@ godot-mono
 intellij-idea-community-edition
 pycharm-community-edition
 dbeaver
+postgresql
 ollama
 
 
@@ -72,7 +73,9 @@ discord
 neofetch
 evince
 qbittorrent
+obs-studio
 kdenlive
+lmms
 ffmpeg
 ffmpegthumbs
 gst-plugins-base
