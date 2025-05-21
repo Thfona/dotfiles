@@ -27,6 +27,7 @@ scrot
 flameshot
 fwupd
 wine
+dosfstools
 
 
 # system-utils
